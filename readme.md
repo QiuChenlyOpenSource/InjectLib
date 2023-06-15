@@ -20,6 +20,7 @@
     目前支持最新版 Adobe Photoshop 版本: 24.7.0 20230612.m.2205 9cfa76c  x64
 14. Omi录屏专家 1.3.1 (2023052501) 后续版本通杀 需要从Mac AppStore 下载
 15. Microsoft Office Word/PowerPoint/Excel/Outlook 16.74 365订阅版 需要从Mac AppStore 下载
+16. Affinity 2.1.0 三件套 需要从Mac AppStore 下载
 
 ### 仅支持Intel版本: 有些App我没有M版本二进制
 暂无

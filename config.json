@@ -118,6 +118,14 @@
       "packageName": "com.mac.utility.screen.recorder",
       "bridgeFile": "/Contents/MacOS/",
       "injectFile": "OmniRecorder"
+    },{
+      "packageName": [
+        "com.seriflabs.affinityphoto2",
+        "com.seriflabs.affinitydesigner2",
+        "com.seriflabs.affinitypublisher2"
+      ],
+      "injectFile": "liblibzlib.dylib",
+      "supportVersion": ["2.1.0"]
     }
   ]
 }

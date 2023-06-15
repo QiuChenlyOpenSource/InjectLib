@@ -69,7 +69,23 @@ def main
   config = JSON.parse config
   basePublicConfig = config['basePublicConfig']
   appList = config['AppList']
-  appList.each { |app|
+
+  #prepare resolve package lst
+  appLst = []
+  appList.each do |app|
+    packageName = app['packageName']
+    if packageName.is_a?(Array)
+      packageName.each { |name|
+        tmp = app.dup
+        tmp['packageName'] = name
+        appLst.push tmp
+      }
+    else
+      appLst.push app
+    end
+  end
+
+  appLst.each { |app|
     packageName = app['packageName']
     appBaseLocate = app['appBaseLocate']
     bridgeFile = app['bridgeFile']
@@ -78,8 +94,6 @@ def main
     supportVersion = app['supportVersion']
     supportSubVersion = app['supportSubVersion']
     extraShell = app['extraShell']
-
-    # puts "本地读取的包名 #{packageName}"
 
     localApp = install_apps.select { |_app| _app['CFBundleIdentifier'] == packageName }
     if localApp.empty? && (appBaseLocate.nil? || !Dir.exist?(appBaseLocate))
