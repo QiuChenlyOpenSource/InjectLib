@@ -117,7 +117,8 @@
     {
       "packageName": "com.mac.utility.screen.recorder",
       "bridgeFile": "/Contents/MacOS/",
-      "injectFile": "OmniRecorder"
+      "injectFile": "OmniRecorder",
+      "extraShell": "omni-recorder.sh"
     },{
       "packageName": [
         "com.seriflabs.affinityphoto2",
